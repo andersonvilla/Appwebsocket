@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+@font-face{
+    font-family: Dades;
+    src: url("../fonts/Dades.ttf");
+}
+
+@font-face{
+    font-family: Champagne;
+    src: url("../fonts/Champagne\ &\ Limousines.ttf");
+}
+
+@font-face{
+    font-family: Demode;
+    src: url("../fonts/Demode.ttf");
+}
+
+body{
+    background: #f0f0f0;
+}
+
+.xop-section:not(.titulos){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 50;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin: 0 0 em;
+}
+
+.project{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    margin: 1em 0;
+    cursor: pointer;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+.project figure img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 300px;
+}
+
+.project figcaption{
+    padding: 1em;
+    background: #966116;
+    color: #fff;
+}
+
+.banner-text{
+    font-family: Dades;
+    font-size: 45px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+}
+
+#cai{
+    font-family: Champagne;
+}
+
+.project h3:not(.banner-text){
+    font-weight: 300;
+    color: white;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: .3em;
+}
+
+.cta{
+    font-family: Champagne;
+    font-weight: bold;
+    width: 82%;
+    height: auto;
+    text-align: center;
+    background: #d98c20;
+    color:black;
+    margin-top: 10px;
+}
+
+.cta:after{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.titulos h1{
+    font-family: Champagne;
+    font-size: 55px;
+    text-align: center;
+    background: #962116;
+    color: white;
+    width: 960px;
+    height: 75px;
+    line-height: 75px;
+    margin: 25 auto;
+}
+
+.titulos h2{
+    font-family: Champagne;
+    font-size: 60px;
+    text-align: center;
+    background: #333333;
+    color: white;
+    width: 960px;
+    height: 75px;
+    line-height: 75px;
+    margin: 25 auto;
+}
+
+@media screen and (min-width: 960px){
+    .xop-wrapper:not(.titulos){
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .xop-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 1em;
+    }
+    #banner:nth-child(1){
+        grid-column: 1 / span 4;
+    }
+    .project{
+        width: 100%;
+        height: 300px;
+        text-decoration: none;
+        margin: 0;
+    }
+    .project figure{
+        position: relative;
+        overflow: hidden;
+    }
+    .project figure img{
+        position: relative;
+        z-index: 999;
+        transition: transform 0.4s;
+    }
+    .project figure:hover img{
+        transform: translateY(-90px);
+    }
+    .project figcaption{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+        height: 90px;
+        width: 100%;
+    }
+}
+  
